@@ -52,7 +52,7 @@ def process_orders(product_id, recipients, event_id, user_id, organizer_id):
                 customer_name = "Aluno"
             data = {
                 "email": customer_email,
-                "locale": "fr-be",
+                "locale": "pt-pt",
                 "sales_channel": "web",
                 "positions": [
                     {
