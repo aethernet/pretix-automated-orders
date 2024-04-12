@@ -49,7 +49,7 @@ def process_orders(product_id, recipients, event_id, user_id, organizer_id):
             customer_name = customer[2]
             customer_email = customer[0]
             if len(customer_name) == 0:
-                customer_name = ""
+                customer_name = "blank"
             data = {
                 "email": customer_email,
                 "locale": "fr-be",
