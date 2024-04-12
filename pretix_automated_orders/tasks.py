@@ -49,10 +49,10 @@ def process_orders(product_id, recipients, event_id, user_id, organizer_id):
             customer_name = customer[2]
             customer_email = customer[0]
             if len(customer_name) == 0:
-                customer_name = "Aluno"
+                customer_name = ""
             data = {
                 "email": customer_email,
-                "locale": "pt-pt",
+                "locale": "fr-be",
                 "sales_channel": "web",
                 "positions": [
                     {
