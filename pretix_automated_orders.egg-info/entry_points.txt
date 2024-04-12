@@ -1,0 +1,2 @@
+[pretix.plugin]
+pretix_automated_orders = pretix_automated_orders:PretixPluginMeta

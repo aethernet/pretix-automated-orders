@@ -1,0 +1,7 @@
+recursive-include pretix_automated_orders/static *
+recursive-include pretix_automated_orders/templates *
+recursive-include pretix_automated_orders/locale *
+recursive-include pretix_automated_orders/*
+include LICENSE
+include README.rst
+exclude .gitlab-ci.yml

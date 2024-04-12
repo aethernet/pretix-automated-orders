@@ -1,0 +1,22 @@
+{% extends "pretixcontrol/event/settings_base.html" %}
+
+{% load i18n bootstrap3 %}
+{% block title %} {% trans "Create Automated Orders" %}{% endblock %}
+{% block inside %}
+    <div class="p-1 my-2 text-danger">
+        {{ form.errors }}
+        {{ form.non_field_errors }}
+    </div>
+    <form action="{{ request.path }}" method="post" class="form-horizontal">
+        {% csrf_token %}
+        <fieldset>
+            <legend>{% trans "Automated Orders Settings" %}</legend>
+            {% bootstrap_form form layout="horizontal" %}
+        </fieldset>
+        <div class="form-group submit-group">
+            <button type="submit" class="btn btn-primary btn-save">
+                {% trans "Save" %}
+            </button>
+        </div>
+    </form>
+{% endblock %}
