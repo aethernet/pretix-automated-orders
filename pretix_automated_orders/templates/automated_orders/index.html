@@ -8,6 +8,7 @@
     {{ form.non_field_errors }}
 </div>
 <form action="{{ request.path }}" method="post" class="form-horizontal">
+    {% csrf_token %}
     <fieldset>
         <legend>{% trans "Automated Orders Settings" %}</legend>
         {% bootstrap_form form layout="horizontal" %}
