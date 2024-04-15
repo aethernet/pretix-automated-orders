@@ -3,6 +3,7 @@ from django.shortcuts import reverse, redirect
 from django.utils.translation import gettext as _
 from django.views.generic.edit import FormView
 from pretix.control.permissions import EventPermissionRequiredMixin
+from pretix.base.models import Item
 from .forms import AutomatedBulkOrdersForm
 from .tasks import process_orders
 

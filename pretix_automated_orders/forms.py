@@ -47,7 +47,7 @@ class AutomatedBulkOrdersForm(forms.ModelForm):
         if "event" in kwargs:
             event = kwargs.pop("event")
         super().__init__(*args, **kwargs)
-        self.fields["product"].queryset = Item.objects.filter(event=event)
+        self.fields["product"].queryset = Item.objects.filter(event=event, default_price=0)
 
     Recipient = namedtuple("Recipient", "email number name tag")
 
