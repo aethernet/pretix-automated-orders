@@ -34,7 +34,7 @@ setup(
     author="Joao Pires",
     author_email="jpires@evolutio.pt",
     license="Apache",
-    install_requires=["Django==4.2"],
+    install_requires=["Django==4.2.11"],
     packages=find_packages(exclude=["tests", "tests.*"]),
     include_package_data=True,
     cmdclass=cmdclass,
