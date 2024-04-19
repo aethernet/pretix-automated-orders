@@ -23,9 +23,12 @@ class AutomatedBulkOrdersForm(forms.ModelForm):
         label=_("Recipients"),
         widget=forms.Textarea(
             attrs={
-                "initial": "email,name\n"
+                "placeholder": "email,name\njohn@example.org,John\n\n-- {} --\n\njohn@example.org\njane@example.net".format(
+                    _("or")
+                )
             }
         ),
+        initial: "email,name\n",
         required=True,
         help_text=_(
             f"You can either supply a list of email addresses with one email address per line, or a CSV file with a title column "
