@@ -23,9 +23,7 @@ class AutomatedBulkOrdersForm(forms.ModelForm):
         label=_("Recipients"),
         widget=forms.Textarea(
             attrs={
-                "placeholder": "email,name\njohn@example.org,John\n\n-- {} --\n\njohn@example.org\njane@example.net".format(
-                    _("or")
-                )
+                "initial": "email,name\n"
             }
         ),
         required=True,
