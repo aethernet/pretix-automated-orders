@@ -29,6 +29,7 @@ class AutomatedBulkOrdersForm(forms.ModelForm):
             }
         ),
         required=True,
+        initial="email,name\n",
         help_text=_(
             f"You can either supply a list of email addresses with one email address per line, or a CSV file with a title column "
             'and one or more of the columns:'
